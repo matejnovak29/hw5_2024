@@ -4,10 +4,13 @@
 }
 
 @keyframes loadlogo {
+    /* Setting animation starting point */
     0% {
         width: 25px;
         opacity: 0;
     }
+
+    /* Setting animation ending point */
     100% {
         width: 475px;
         opacity: 1;
@@ -75,6 +78,7 @@ header {
 @media screen and (min-width: 900px){
     header {
         flex-direction: row;
+        /* Splitting logo and navigation */
         justify-content: space-between;
     }
     
@@ -86,7 +90,8 @@ header {
         flex-basis: 275px;
         flex-direction: row;
     }
-    
+
+    /* Making the header in body stick to the top when scrolling */
     body > header {
         position: sticky;
         top: 0;
@@ -95,6 +100,7 @@ header {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    /* Turning off animation */
     #logo {
         animation: none;
     }
@@ -106,14 +112,17 @@ header {
         background-image: none;
     }
 
+    /* Setting elements below each other */
     header {
         flex-direction: column;
     }
 
+    /* Setting up the width for justify content */
     nav {
         width: 100%;
     }
-    
+
+    /* Diving nav links evenly */
     .nav_links {
         display: flex;
         flex-direction: row;
@@ -122,6 +131,7 @@ header {
 
     .pricing {
         flex-direction: row;
+        /* Setting up the same end for all pricings */
         align-items: flex-end;
     }
 
@@ -130,6 +140,7 @@ header {
         flex-basis: 325px;
     }
 
+    /* Every second li and we want to apply the thumb on the end of the line */
     .card > ul > li:nth-child(2)::after {
         content: "👍";
     }
