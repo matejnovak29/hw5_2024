@@ -1,3 +1,14 @@
+.skip {
+    position: absolute;
+    top: -999px;
+  }
+  
+  
+.skip:focus{
+    position: absolute;
+    top: 10px;
+}
+
 #logo {
     width: 475px;
     animation: loadlogo 5s 1;
